@@ -1,10 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <form style="" method="POST">
+    <form style="" method="POST" action="">
         {% csrf_token %}
-        <p>{{ items.name }}</p>
-        {% for purchase in items.purchases.all %}
-            <p>{{ purchases.name }}</p>
-            {% endfor %}
+        <p>{{ purchases.name }} - {{ purchases.age }} - {{ purchases.date_purchase }}</p>
 {% endblock %}
+    </form>

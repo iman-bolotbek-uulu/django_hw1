@@ -46,8 +46,8 @@ def item(request):
 
 
 def detail_item(request, id):
-    items = get_object_or_404(models.Item, id=id)
+    purchases = get_object_or_404(models.Purchase, id=id)
     context = {
-        'items': items
+        'purchases': purchases
     }
     return render(request, 'detail_item.html', context)
